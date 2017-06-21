@@ -1,5 +1,5 @@
 @echo off
-del *.png
+del img\*.png
 php gen.php
 git add .
 git commit -m "%date%"_%time%"
