@@ -113,7 +113,7 @@ $projects = [
         'name' => 'asm.go',
         'link' => 'https://gitla.in/Doc0160/asm.go',
         'desc' => [
-            'Met Ã  disposition l\'instruction RDTSC pour Go.',
+            'Met à disposition l\'instruction RDTSC pour Go.',
             'Permet de faire une meusure précise de la performance d\'un programme (en cycles processeurs).',
         ],
         'lang' => ['Go', 'asm'],
