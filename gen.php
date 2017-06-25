@@ -28,8 +28,9 @@ function text($text) {
         }
         $text = $tmp;
         unset($tmp);
+    } else {
+        $text = '<p>'.nl2br(trim($text)).'</p>';
     }
-    $text = '<p>'.nl2br(trim($text)).'</p>';
     return $text;
 }
 
@@ -47,7 +48,7 @@ $projects = [
         'name' => 'Kikipedo',
         'desc' => [
             'Serveur portable de Wiki simplifié créer dans le but de faciliter la création d\'une base de connaissance lors d\'un travail en équipe.',
-            'Ce projet a été, au départ, crée pour aider au suivi des fiches de personnage du jeux de rôle "Roll For Shoes".',
+            'Ce projet a été, au départ, crée pour aider au suivi des fiches de personnage du jeux de rÃ´le "Roll For Shoes".',
         ],
         'more' => [
             'Ce programme est composé de plusieurs choses:',
@@ -68,14 +69,14 @@ $projects = [
         'link' => 'https://github.com/Doc0160/Pink-Samurai-Chat',
         'img' => 'https://raw.githubusercontent.com/Doc0160/Pink-Samurai-Chat/master/404/evil_eyes.png',
         'desc' => [
-            'Pink Samurai est un logicel de chat pour réseau local ... avec un design plutôt douteux.',
+            'Pink Samurai est un logicel de chat pour réseau local ... avec un design plutÃ´t douteux.',
         ],
         'more' => [
             'Prend en charge:',
             '<ul>'
             .'<li>La création d\'un compte</li>'
-            .'<li>HTTPS</li>'
-            .'<li>Multiples channels</li>'
+           .'<li>HTTPS</li>'
+           .'<li>Multiples channels</li>'
            .'</ul>',
         ],
         'lang' => ['Go', 'Websockets'],
@@ -91,7 +92,7 @@ $projects = [
         'link' => 'https://git.teknik.io/Doc0160/NESfucker',
         'desc' => [
             'Emulateur NES NTSC.',
-            'Le processus de compilation m\'étant familier, je me suis tempté à l\'émulation. La NES étant très bien docummenté, c\'est donc le systéme que j\'ai choisi de documenter.',
+            'Le processus de compilation m\'étant familier, je me suis tempté Ã  l\'émulation. La NES étant trÃ¨s bien docummenté, c\'est donc le systéme que j\'ai choisi de documenter.',
         ],
         'more' => [
             'Le projet prend en charge un nombre limité de mapper.',
@@ -112,7 +113,7 @@ $projects = [
         'name' => 'asm.go',
         'link' => 'https://gitla.in/Doc0160/asm.go',
         'desc' => [
-            'Met à disposition l\'instruction RDTSC pour Go.',
+            'Met Ã  disposition l\'instruction RDTSC pour Go.',
             'Permet de faire une meusure précise de la performance d\'un programme (en cycles processeurs).',
         ],
         'lang' => ['Go', 'asm'],
@@ -120,7 +121,7 @@ $projects = [
     [
         'name' => 'YLP',
         'link' => 'https://github.com/Doc0160/YLP',
-        'desc' => 'Un programme ayant pour but de secrétement changer le fond d\'écran d\'un ordinateur windows à interval régulier.',
+        'desc' => 'Un programme ayant pour but de secrétement changer le fond d\'écran d\'un ordinateur windows Ã  interval régulier.',
         'lang' => ['Go', 'Windows', 'Blague'],
     ],
     [
@@ -132,8 +133,43 @@ $projects = [
     [
         'name' => 'MarcyR30',
         'link' => 'https://github.com/Doc0160/MarcyR30',
-        'desc' => 'Bot Discord avec un systéme de pluggin.',
-        'lang' => ['Go', 'Discord'],
+        'desc' => [
+            'Bot Discord et assistante personnel rebboté pour la 30iéme fois.',
+            'Dispose d\'un systéme de cache, d\'un systéme de base de données et utilise wit.ai pour la reconnaissance des commandes.',
+        ],
+        'more' => [
+            'Marcy: bot slack écrit en PHP5',
+            'MarcyR1: Bot Slack écrit en PHP5 et utilisant l\'extension expérimentale pthread',
+            'MarcyR3: Réécriture du systéme précédent pour y inclure une mesure pècise du temps d\'éxécution des commandes',
+            'MarcyR4: Réécriture du systéme précédent pour y intégrer un système qui réécrit son propre code. -version qui fonctionne mais trop lente pour utilisation-',
+            'MarcyR5: Réécriture d’une version équivalente à la R3 mais en Go et donc beaucoup plus rapide',
+            'MarcyR6: Réécriture d’une version équivalente à la R4 mais en Go; le garbage collector de golang ne correspond pas à mes attentes donc j\'ai prématurément mis fin à cette révision',
+            'MarcyR7: Bot et serveur IRC écrit en C++ avec un systéme de plugin par DLL',
+            'MarcyR8: Bot et serveur IRC écrit en Go avec un systéme de plugin par RPC',
+            'MarcyR9: Bot Slack écrit en Go avec un systéme de plugin par RPC, ainsi qu\'un sytéme simple de création de plugin assisté',
+            'MarcyR10: Réimplémentation de la R9 mais en sytéme distrubié Go, C++ et PHP7; grosse perte de performance à cause des changements de contexte (car les microservices tournent sur la même machine)',
+            'MarcyR11: Réimplémentation de la R9 en Go mais en permettant la création de plugins en PHP7',
+            'MarcyR11: Réécriture sous forme d\'une API rest en PHP7',
+            'MarcyR12: Bot discord en PHP7 avec l\'extension pthread',
+            'MarcyR13: Bot discord en PHP7 (sans l\'extension pthread)',
+            'MarcyR14: Bot Slack en Rust (pour tester le language)',
+            'MarcyR15: Bot Slack en Rust de compilation en ligne (suportant C++/C/Rust/Go/ASM/Brainfuck)',
+            'MarcyR16: Bot Discord en GO enregistrant toutes les conversations pour utilisation dans des analyses futures',
+            'MarcyR17: Bot Discord en GO utilisant les données récoltées dans la R16 pour détecté les phrases qui ne lui sont pas adressées (taux de réussite de 73.263%)',
+            'MarcyR18: Bot Discord basé sur la R17 et utilisant Cleverbot pour dialoger',
+            'MarcyR19: Bot Discord basé sur la R18 mais interceptant des commandes et ayant un systéme de plugin utilisant des DLL',
+            'MarcyR20: Bot Slack ayant pour but d\'organiser un "Pére noël secret"',
+            'MarcyR21: Bot Quip en Go, servant principalement à ajouter un sytéme de template pour mes documents',
+            'MarcyR22: Relai en Go entre IRC, Discord, Slack et Quip',
+            'MarcyR23: Réimplémentation de R22 en ajoutant Telegram, e-mail, Dropbox, Google Drive et OneDrive',
+            'MarcyR24: Réimplémentation de R23 avec la mise en disposition de commandes d\'administration',
+            'MarcyR25: Bot Discord en Go ayant pour unique but de faciliter la mise en place d\'une partie de Dongeon&Dragon en ligne.',
+            'MarcyR26: Bot Discord Go avec systéme se nourrissant d\'api rest en gise de plugin',
+            'MarcyR27: Bot Discord Go avec systéme de base de données',
+            'MarcyR28: Bot Discord Go avec systéme de base de données, systéme de cache',
+            'MarcyR29: Bot Discorden Go avec un sytéme de cache, systéme de base de données et systéme de plugin',
+        ],
+        'lang' => ['Go', 'Discord', 'wit.ai'],
     ],
     [
         'name' => 'VLCiBas',
@@ -182,95 +218,92 @@ function doImg(array $project) {
     }
 
     if(isset($project['link'])) echo '<a target="_blank" href="'.$project['link'].'">';
-    echo '<img class="img-rounded" src="'.$filename.'">';
+    echo '<img alt="'.$project['name'].'" class="img-rounded" src="'.$filename.'">';
     if(isset($project['link'])) echo '</a>';
 };
-
+echo '<!DOCTYPE html>';
+echo '<html lang="en">';
+echo '<head>';
+echo '<meta charset="utf-8">';
+echo '<title>Tristan Magniez</title>';
 ?>
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>Tristan Magniez</title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        <style>
-         .col-md-4 img {
-             margin: auto;
-         }
-        </style>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    </head>
-    <body>
-        <div class="container">
-            <div class="page-header">
-                <h1>Tristan Magniez
-                    <small>
-                        <a href="https://github.com/Doc0160/">
-                            <i class="fa fa-github" aria-hidden="true"></i>
-                            Github
-                        </a>
-                        <a href="https://gitla.in/Doc0160">
-                            <i class="fa fa-git" aria-hidden="true"></i>
-                            Gitlain
-                        </a>
-                        <a href="https://git.teknik.io/doc0160">
-                            <i class="fa fa-git" aria-hidden="true"></i>
-                            Teknik
-                        </a>
-                    </small>
-                </h1>
-            </div>
-            <?php
-            echo '<div class="row">';
-            $i = 0;
-            foreach($projects as $project) {
-                echo '<!--';
-                var_dump($project);
-                echo '-->';
-                
-                echo '<div class="col-lg-4">';
-                echo '<div class="thumbnail">';
-                
-                doImg($project);
-
-                echo '<div class="caption">';
-                doTitle($project);
-                if(isset($project['lang'])) {
-                    echo '<kbd>';
-                    echo implode($project['lang'], '</kbd> <kbd>');
-                    echo '</kbd>';
-                }
-
-                echo text($project['desc']);
-                
-                if(isset($project['more'])) {
-                    echo '<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#'.slugify($project['name']).'" aria-expanded="false" aria-controls="collapseExample">';
-                    echo 'En savoir plus';
-                    echo '</button>';
-                    
-                    echo '<div class="collapse" id="'.slugify($project['name']).'">';
-                    echo '<div class="well">';
-                    echo text($project['more']);
-                    echo '</div>';
-                    echo '</div>';
-                }
-                
-                echo '</div>';
-                echo '</div>';
-                echo '</div>';
-                $i++;
-                if($i % 3 == 0) {
-                    echo '</div>';
-                    echo '<div class="row">';
-                }
-            }
-            echo '</div>';
-            ?>
-        </div>
-    </body>
-</html>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+ .col-md-4 img {
+     margin: auto;
+ }
+</style>
 <?php
+echo '<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>';
+echo '<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>';
+echo '</head>';
+echo '<body>';
+echo '<div class="container">';
+echo '<div class="page-header">';
+echo '<h1>';
+echo 'Tristan Magniez ';
+echo '<small>';
+echo ' <a href="https://github.com/Doc0160/">';
+echo '<i class="fa fa-github" aria-hidden="true"></i>';
+echo ' Github';
+echo '</a>';
+echo ' <a href="https://gitla.in/Doc0160">';
+echo '<i class="fa fa-git" aria-hidden="true"></i>';
+echo ' Gitlain';
+echo '</a>';
+echo ' <a href="https://git.teknik.io/doc0160">';
+echo '<i class="fa fa-git" aria-hidden="true"></i>';
+echo ' Teknik';
+echo '</a>';
+echo '</small>';
+echo '</h1>';
+echo '</div>';
+
+echo '<div class="row">';
+$i = 0;
+foreach($projects as $project) {
+    
+    echo '<div class="col-lg-4">';
+    echo '<div class="thumbnail">';
+    
+    doImg($project);
+
+    echo '<div class="caption">';
+    doTitle($project);
+    if(isset($project['lang'])) {
+        echo '<kbd>';
+        echo implode($project['lang'], '</kbd> <kbd>');
+        echo '</kbd>';
+    }
+
+    echo text($project['desc']);
+    
+    if(isset($project['more'])) {
+        echo '<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#'.slugify($project['name']).'" aria-expanded="false" aria-controls="'.slugify($project['name']).'">';
+        echo 'En savoir plus';
+        echo '</button>';
+        
+        echo '<div class="collapse" id="'.slugify($project['name']).'">';
+        echo '<div class="well">';
+        echo text($project['more']);
+        echo '</div>';
+        echo '</div>';
+    }
+    
+    echo '</div>';
+    echo '</div>';
+    echo '</div>';
+    $i++;
+    if($i % 3 == 0) {
+        echo '</div>';
+        echo '<div class="row">';
+    }
+}
+echo '</div>';
+echo '</div>';
+echo '</body>';
+echo '</html>';
+
 file_put_contents('index.html', ob_get_clean());
