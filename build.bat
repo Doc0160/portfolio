@@ -1,6 +1,6 @@
 @echo off
 SET var=1
-IF %var%==2 (
+IF %var%==1 (
    del img\*.png
 )
 
