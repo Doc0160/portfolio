@@ -1,12 +1,14 @@
 @echo off
-SET var=1
-IF %var%==1 (
+SET git=1
+SET img=0
+
+IF %img%==1 (
    del img\*.png
 )
 
 php gen.php
 
-IF %var%==1 (
+IF %git%==1 (
    git add .
    git commit -m "%date%-%time%"
    git push
