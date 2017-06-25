@@ -7,7 +7,7 @@ IF %var%==2 (
 php gen.php
 
 IF %var%==1 (
-git add .
-git commit -m "%date%-%time%"
-git push
+   git add .
+   git commit -m "%date%-%time%"
+   git push
 )
