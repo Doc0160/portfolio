@@ -177,6 +177,7 @@ $projects = [
         'desc' => [
             '"VLC is Bad at streaming" est un programme qui cherche à compenser le buffer trop petit de VLC lors de la lecture de video en streaming.',
             'Ce programme télécharge assez de video avant de lancer VLC pour visioner sans jamais attendre la phase de buffering.',
+			'Fonctionne aussi avec d\'autres programmes de lecture video/audio.',
         ],
         'lang' => ['Go'],
     ],
